@@ -46,7 +46,10 @@ module.exports = {
     },
     serverOverrides: function(app, express) {
         app.use(express.static(path.join(__dirname, 'dist')));
-    }
+    },
+    serverStart: function(server) {
+        injectMyCode(server); // add things on top of server, e.g. websockets server
+    },
 };
 ```
 
