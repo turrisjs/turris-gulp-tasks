@@ -1,6 +1,6 @@
 {
   "name": "turris-gulp-tasks",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Turris.js common gulp tasks",
   "main": "index.js",
   "author": "Tim Ermilov <yamalight@gmail.com> (http://codezen.net)",
@@ -35,5 +35,6 @@
     "url-loader": "^0.5.5",
     "webpack": "^1.8.5",
     "webpack-dev-server": "^1.8.0"
-  }
+  },
+  "scripts": {}
 }
