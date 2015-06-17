@@ -70,6 +70,9 @@ var applyDefaults = function(cfg) {
         if (_.isArray(a)) {
             return a.concat(b);
         }
+        if (_.isObject(a)) {
+            return _.merge(b, a);
+        }
     });
 };
 
