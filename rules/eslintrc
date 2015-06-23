@@ -17,6 +17,9 @@
     // enable react plugin
     "react"
   ],
+  globals: {
+    "__WEBPACK__": true
+  },
   // To give you an idea how to override rule options
   "rules": {
     // Possible Errors
