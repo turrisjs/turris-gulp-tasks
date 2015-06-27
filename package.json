@@ -24,6 +24,7 @@
     "gulp": "^3.8.11",
     "gulp-spawn-mocha": "^2.0.1",
     "gulp-util": "^3.0.4",
+    "http-proxy": "^1.11.1",
     "istanbul": "^0.3.13",
     "json-loader": "^0.5.1",
     "less": "^2.5.0",
