@@ -19,13 +19,7 @@ Package can be installed using NPM:
 
 Install, create a `gulpfile.js` in your project folder with the following code:
 ```js
-var gulp = require('turris-gulp-tasks')([
-    'serve',
-    'build',
-    'debug',
-    'test',
-    'cover',
-], require('./buildConfig.js'));
+var gulp = require('turris-gulp-tasks')(require('./buildConfig.js'));
 // load your custom tasks here
 require('./gulp/my-task.js')(gulp);
 
@@ -50,6 +44,14 @@ module.exports = {
     serverStart: function(server) {
         injectMyCode(server); // add things on top of server, e.g. websockets server
     },
+    devServer: {
+        proxy: {
+            '/api/': 'http://localhost:8081' // default value, always appended if not passed from outside
+        },
+        headers: {
+            'X-Custom': 'val' // your custom headers here
+        }
+    }.
 };
 ```
 
