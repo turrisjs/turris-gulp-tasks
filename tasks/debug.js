@@ -20,8 +20,14 @@ module.exports = function(config) {
         if (!proxy['/api']) {
             proxy['/api'] = 'http://localhost:8081';
         }
+        if (!proxy['/dist']) {
+            proxy['/dist'] = 'http://localhost:8081';
+        }
     } else {
-        proxy = {'/api': 'http://localhost:8081'};
+        proxy = {
+            '/api': 'http://localhost:8081',
+            '/dist': 'http://localhost:8081',
+        };
     }
     var headers = {};
     if (config.devServer && config.devServer.headers) {
