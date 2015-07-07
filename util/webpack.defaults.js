@@ -64,6 +64,10 @@ var applyDefaults = function(cfg) {
                     test: /\.png$/,
                     loader: 'url-loader?limit=10000&mimetype=image/png',
                 },
+                {
+                    test: /\.gif$/,
+                    loader: 'url-loader?limit=10000&mimetype=image/gif'
+                }
             ],
         },
     }, function(a, b) {
