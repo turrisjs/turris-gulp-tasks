@@ -15,8 +15,12 @@ module.exports = function(config) {
     }
     // get server config
     var proxy = {};
-    if (config.devServer && config.devServer.proxy) {
-        proxy = config.devServer.proxy;
+    console.log('config', wpConfig);
+    if (wpConfig.devServer && wpConfig.devServer.proxy) {
+        proxy = wpConfig.devServer.proxy;
+        console.log('proxy', proxy);
+
+
         if (!proxy['/api']) {
             proxy['/api'] = 'http://localhost:8081';
         }
@@ -30,7 +34,7 @@ module.exports = function(config) {
         };
     }
     var headers = {};
-    if (config.devServer && config.devServer.headers) {
+    if (wpConfig.devServer && wpConfig.devServer.headers) {
         headers = config.devServer.headers;
     }
     // run webpack
