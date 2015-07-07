@@ -15,12 +15,9 @@ module.exports = function(config) {
     }
     // get server config
     var proxy = {};
-    console.log('config', wpConfig);
     if (wpConfig.devServer && wpConfig.devServer.proxy) {
         proxy = wpConfig.devServer.proxy;
-        console.log('proxy', proxy);
-
-
+   
         if (!proxy['/api']) {
             proxy['/api'] = 'http://localhost:8081';
         }
