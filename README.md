@@ -9,6 +9,7 @@ Provides basic gulp tasks for all your ES6 React applications and component need
 - `server` - uses [express.js](http://expressjs.com/) to statically serve folder specified in `config.path` at `localhost:8080`. Serves `index.html` for all non-existent requests to allow client-side routing. Allows access to express.js and express app via `config.serverOverrides(app, express)` function.
 - `test` - runs [mocha](http://mochajs.org/) tests starting from file specified at `config.testEntryPoint`.
 - `cover` - runs [istanbul](https://gotwarlost.github.io/istanbul/) to generate test coverage from file specified at `config.testEntryPoint`.
+- `esdoc` - generates jsdoc-based documentation with [esdoc](https://esdoc.org/) using config file specified at `config.esdocConfig`.
 
 ### Installation
 
@@ -34,6 +35,7 @@ var path = require('path');
 module.exports = {
     path: path.resolve(__dirname),
     rootPath: path.resolve(__dirname),
+    esdocConfig: path.join(__dirname, 'esdoc.js'),
     webpackConfig: {
         debug: require('./webpack.config.js'),
         production: require('./webpack.config.prod.js'),
@@ -54,6 +56,8 @@ module.exports = {
     }.
 };
 ```
+
+Note that `esdoc.js` should export structure similar to `esdoc.json` described in [esdoc manual](https://esdoc.org/), but with absolute paths (use `path.join()` to generate them).
 
 ### License
 
