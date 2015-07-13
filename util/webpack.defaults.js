@@ -44,6 +44,10 @@ var applyDefaults = function(cfg) {
                     loaders: ['style', 'css', 'sass'],
                 },
                 {
+                    test: /\.styl$/,
+                    loaders: ['style', 'css', 'stylus'],
+                },
+                {
                     test: /\.jsx?$/,
                     exclude: /node_modules/,
                     loader: 'babel',
