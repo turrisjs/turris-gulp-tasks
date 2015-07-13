@@ -40,6 +40,10 @@ var applyDefaults = function(cfg) {
                     loaders: ['style', 'css', 'less'],
                 },
                 {
+                    test: /\.scss$/,
+                    loaders: ['style', 'css', 'sass'],
+                },
+                {
                     test: /\.jsx?$/,
                     exclude: /node_modules/,
                     loader: 'babel',
