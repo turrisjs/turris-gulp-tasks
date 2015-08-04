@@ -1,6 +1,10 @@
-# [Turris.js](https://github.com/turrisjs) common gulp tasks
+# WARNING! This package was deprecated in favor of plain dependencies as of turris-generator v0.8.0
 
-Provides basic gulp tasks for all your ES6 React applications and component needs.  
+This package will no longer be maintained.
+
+## [Turris.js](https://github.com/turrisjs) common gulp tasks
+
+> Provides basic gulp tasks for all your ES6 React applications and component needs.
 
 ### Included things
 
@@ -13,7 +17,7 @@ Provides basic gulp tasks for all your ES6 React applications and component need
 
 ### Installation
 
-Package can be installed using NPM:  
+Package can be installed using NPM:
 `npm install turris-gulp-tasks`
 
 ### Usage
